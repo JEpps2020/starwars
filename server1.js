@@ -3,7 +3,7 @@
 var express = require("express");
 
 var app = express();
-var PORT = 3000;
+// var PORT = 3000;
 
 // Data
 // ===========================================================
@@ -53,6 +53,7 @@ app.get("/darthmaul", function(req, res) {
 
 // Listener
 // ===========================================================
+const PORT = process.env.PORT || 3000
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
